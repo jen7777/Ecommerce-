@@ -7,6 +7,8 @@ from .forms import RegisterForm
 
 def index(request):
     return render(request,'store/index.html')
+def home(request):
+    return render(request,'store/home.html')
 def cart(request):
     context={}                                      
     return render(request,'store/cart.html',context)

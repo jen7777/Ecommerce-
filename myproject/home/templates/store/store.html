@@ -1,5 +1,18 @@
-<html>
-    <body>
-      <h1>Store<h1>
-    </body>
-</html>
+{% extends 'store/index.html'%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+<div class="card mx-5 my-3" style="width: 18rem;display:inline-block">
+    <img class="card-img-top" src="{% static 'images/blankitem.png' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-center">Product</h5>
+      <div class="text-center">
+        <a href="#" class="btn btn-primary">Add to cart</a>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock%}
