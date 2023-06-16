@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages 
 from django.contrib.auth import authenticate,login,logout
 from .forms import RegisterForm
+from .models import Product
 
 def index(request):
     return render(request,'store/index.html')
@@ -13,8 +14,10 @@ def cart(request):
     context={}                                      
     return render(request,'store/cart.html',context)
 def store(request):
-    context={}                                      
-    return render(request,'store/store.html',context)
+    dict_prod={
+        'product':Product.objects.all()
+    }                                      
+    return render(request,'store/store.html',dict_prod)
 def checkout(request):
     context={}                                      
     return render(request,'store/checkout.html',context)
