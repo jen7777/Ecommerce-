@@ -8,9 +8,13 @@
     <div class="card mx-3 my-3" style="width: 18rem;display:inline-block">
       <img class="card-img-top" src="{{p.prod_image.url}}" alt="...">
       <div class="card-body">
-        <hr>
-        <h5 class="card-title text-center">{{p.prod_name}}</h5>
         
+        <div class="row">
+          <h5 class="col card-title">{{p.prod_name}}</h5>
+          <h5 class="col"></h5>
+          <h3 class="col card-title align-right">${{p.prod_price}}</h3>
+          <hr>
+        </div>
         <div class="text-center">
           <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
