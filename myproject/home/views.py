@@ -11,7 +11,10 @@ def index(request):
 def home(request):
     return render(request,'store/home.html')
 def cart(request):
-    context={}                                      
+    
+    items=[]
+         
+    context={'items':items}                                      
     return render(request,'store/cart.html',context)
 def store(request):
     dict_prod={
