@@ -4,18 +4,15 @@ from django.contrib.auth.models import User
 from django.contrib import messages 
 from django.contrib.auth import authenticate,login,logout
 from .forms import RegisterForm
-from .models import Product
+from .models import *                               # * means all functions
 
 def index(request):
     return render(request,'store/index.html')
 def home(request):
     return render(request,'store/home.html')
 def cart(request):
-    
-    items=[]
-         
-    context={'items':items}                                      
-    return render(request,'store/cart.html',context)
+                                         
+    return render(request,'store/cart.html')
 def store(request):
     dict_prod={
         'product':Product.objects.all()
