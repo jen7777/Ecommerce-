@@ -30,13 +30,13 @@
 			<div style="flex:1"><strong>Total</strong></div>
 		</div>
 		
-		
+		{% for p in product%}
 		<div class="cart-row">
-			<div style="flex:2"><img class="row-image" src="{% static  'images/product1.jpg' %}"></div>
-			<div style="flex:2">Nintendo</div>
+			<div style="flex:2"><img class="row-image" src="{%static 'images/predator.jpg'%}"></div>
+			<div style="flex:2">{{p.prod_name}}</div>
 			<div style="flex:1">$20</div>
 			<div style="flex:1">
-				<p class="quantity">2</p>
+				<p class="quantity">{{p.prod_price}}</p>
 				<div class="quantity">
 					<img class="chg-quantity" src="{% static  'images/arrow-up.png' %}">
 			
@@ -45,7 +45,7 @@
 			</div>
 			<div style="flex:1"><p>$40</p></div>
 		</div>
-		
+		{% endfor %}
 
 	</div>
 	</div>

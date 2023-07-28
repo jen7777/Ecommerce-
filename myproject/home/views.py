@@ -11,11 +11,14 @@ def index(request):
 def home(request):
     return render(request,'store/home.html')
 def cart(request):
-                                         
-    return render(request,'store/cart.html')
+    dict_prod={
+        'product':Product.objects.all()                      #loading all products to store.html
+    }     
+                                 
+    return render(request,'store/cart.html',dict_prod)
 def store(request):
     dict_prod={
-        'product':Product.objects.all()
+        'product':Product.objects.all()                      #loading all products to store.html
     }                                      
     return render(request,'store/store.html',dict_prod)
 def checkout(request):
