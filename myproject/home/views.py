@@ -12,7 +12,7 @@ def home(request):
     return render(request,'store/home.html')
 def cart(request):
     dict_prod={
-        'product':Product.objects.all()                      #loading all products to store.html
+        'cart':OrderItem.objects.all()                      #loading all products to store.html
     }     
                                  
     return render(request,'store/cart.html',dict_prod)
